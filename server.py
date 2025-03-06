@@ -1,5 +1,6 @@
-''' Initiates the application for emotions analysis to be executed over the Flask channel
- and deployed on localhost:5000.
+'''
+    Initiates the application for emotions analysis to be executed over the Flask channel
+    and deployed on localhost:5000.
 '''
 from flask import Flask, render_template, request
 from EmotionDetection.emotion_detection import emotion_detector
@@ -8,7 +9,8 @@ app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
 def detect_emotions():
-    ''' This function receives the text from the HTML interface and 
+    '''
+        This function receives the text from the HTML interface and 
         runs emotions analysis over it. 
         The output returned shows the emotions, there scores and
         the dominant emotion for the provided text.
@@ -31,7 +33,9 @@ def detect_emotions():
 
 @app.route("/")
 def render_index_page():
-    ''' This function initiates the rendering of the main application. '''
+    '''
+        This function initiates the rendering of the main application.
+    '''
     return render_template("index.html")
 
 if __name__ == "__main__":
