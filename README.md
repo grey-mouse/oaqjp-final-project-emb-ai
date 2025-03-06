@@ -1,4 +1,4 @@
-# Repository for final project
+# Emotion Detection application
 
 For this project I have:
 
